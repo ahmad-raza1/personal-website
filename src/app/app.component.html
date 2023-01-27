@@ -1,5 +1,16 @@
-<app-header></app-header>
-<main>
-  <router-outlet></router-outlet>
-</main>
-<app-footer></app-footer>
+<div fxLayout="column" class="container">
+  <app-header [sidenav]="sidenav"></app-header>
+  <mat-sidenav-container class="flex-grow">
+    <mat-sidenav #sidenav mode="over" opened="false">
+      <mat-nav-list>
+        <a mat-list-item routerLink="/">Home</a>
+        <a mat-list-item routerLink="/about">About</a>
+      </mat-nav-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+      <router-outlet></router-outlet>
+    </mat-sidenav-content>
+  </mat-sidenav-container>
+  <mat-divider></mat-divider>
+  <app-footer></app-footer>
+</div>

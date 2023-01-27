@@ -4,7 +4,8 @@ import { CommonModule } from '@angular/common';
 import { SharedRoutingModule } from './shared-routing.module';
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
-import { MatButtonModule, MatSidenavModule, MatToolbarModule } from '@angular/material';
+import { MatModule } from '../mat/mat.module';
+import { FlexLayoutModule } from '@angular/flex-layout';
 
 
 @NgModule({
@@ -14,10 +15,10 @@ import { MatButtonModule, MatSidenavModule, MatToolbarModule } from '@angular/ma
   ],
   imports: [
     CommonModule,
+
     SharedRoutingModule,
-    MatSidenavModule,
-    MatToolbarModule,
-    MatButtonModule,
+    MatModule,
+    FlexLayoutModule
   ],
   exports: [
     HeaderComponent,
