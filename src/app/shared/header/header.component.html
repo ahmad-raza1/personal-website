@@ -5,14 +5,7 @@
         </button>
 
         <div fxHide="true" fxShow.gt-sm="true" fxLayout="row" fxLayoutGap="2rem">
-            <a mat-button routerLink="/">Home</a>
-            <a mat-button routerLink="/about">About</a>
-            <a mat-button [matMenuTriggerFor]="menu">Menu</a>
-            <mat-menu #menu="matMenu">
-                <button mat-menu-item>Option 1</button>
-                <button mat-menu-item>Option 2</button>
-                <button mat-menu-item>Option 3</button>
-            </mat-menu>
+            <a mat-button [routerLink]="route.path" *ngFor="let route of menuRoutes">{{route.title}}</a>
         </div>
     </mat-toolbar-row>
 </mat-toolbar>

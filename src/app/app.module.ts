@@ -5,16 +5,12 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { SharedModule } from './shared/shared.module';
-import { AboutComponent } from './components/about/about.component';
-import { HomeComponent } from './components/home/home.component';
 import { MatModule } from './mat/mat.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 
 @NgModule({
   declarations: [
-    AppComponent,
-    AboutComponent,
-    HomeComponent
+    AppComponent
   ],
   providers: [],
   bootstrap: [AppComponent],

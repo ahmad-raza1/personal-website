@@ -1,17 +1,15 @@
-import { Component, Input, OnInit } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { Routes } from '@angular/router';
+import { routes } from 'src/app/menu/menu-routing.module';
+import {ThemePalette} from '@angular/material/core';
 
 @Component({
   selector: 'app-header',
   templateUrl: './header.component.html',
   styleUrls: ['./header.component.scss']
 })
-export class HeaderComponent implements OnInit {
-
+export class HeaderComponent {
   @Input() sidenav!: any;
-
-  constructor() { }
-
-  ngOnInit(): void {
-  }
-
+  menuRoutes: Routes = routes;
+  background: ThemePalette = undefined;
 }

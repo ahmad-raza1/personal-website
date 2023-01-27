@@ -6,12 +6,14 @@ import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { MatModule } from '../mat/mat.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { NotFoundComponent } from './not-found/not-found.component';
 
 
 @NgModule({
   declarations: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NotFoundComponent
   ],
   imports: [
     CommonModule,
@@ -22,7 +24,8 @@ import { FlexLayoutModule } from '@angular/flex-layout';
   ],
   exports: [
     HeaderComponent,
-    FooterComponent
+    FooterComponent,
+    NotFoundComponent
   ]
 })
 export class SharedModule { }
