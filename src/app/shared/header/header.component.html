@@ -4,8 +4,13 @@
             <mat-icon>menu</mat-icon>
         </button>
 
-        <div fxHide="true" fxShow.gt-sm="true" fxLayout="row" fxLayoutGap="2rem">
-            <a mat-button [routerLink]="route.path" *ngFor="let route of menuRoutes">{{route.title}}</a>
-        </div>
+        <nav mat-tab-nav-bar class="nav-bar" [backgroundColor]="background" [tabPanel]="tabPanel" fxLayout="row"
+            fxFlexFill fxLayoutAlign="space-between center">
+            <span>Custom Toolbar</span>
+            <div fxHide="true" fxShow.gt-sm="true" fxLayout="row">
+                <a mat-tab-link [routerLink]="route.path" *ngFor="let route of menuRoutes">{{route.title}}</a>
+            </div>
+        </nav>
+        <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
     </mat-toolbar-row>
 </mat-toolbar>

@@ -1,27 +1,28 @@
-<section id="introduction" fxLayout="row" fxLayout.xs="column" fxLayoutAlign="center start"
-    fxLayoutAlign.xs="start center" fxLayoutGap="1rem" fxLayoutGap.xs="1rem">
-    <div fxFlex="20" fxFlexOrder.xs="2">
-        <mat-card style="border-radius: 50%;">
-            <img mat-card-image src="assets/will-smith.jpeg" alt="Will Smith">
-        </mat-card>
+<section id="introduction" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="2rem">
+    <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center" fxLayoutGap="2rem">
+        <mat-card-header fxLayout="column" fxFlexOrder.xs="2">
+            <mat-card-title>Will Smith</mat-card-title>
+            <mat-card-subtitle>Actor | Director | Producer</mat-card-subtitle>
+        </mat-card-header>
+        <img fxFlex src="assets/will-smith.jpeg" alt="Will Smith">
     </div>
-    <div fxFlex="80" fxFlexOrder.xs="1" fxLayout="column" fxLayoutAlign="start start">
-        <mat-card class="mat-card">
-            <mat-card-header>
-                <mat-card-title>
-                    <h1 class="text-primary">John Doe</h1>
-                </mat-card-title>
-            </mat-card-header>
-            <mat-card-content>
-                <p class="text-secondary">I am a software developer with 5 years of experience in the industry. I
-                    specialize in Angular, React, and Node.js. I have a strong background in web development and have
-                    worked on a variety of projects ranging from small startups to large enterprise systems.</p>
-                <p class="text-secondary">I am passionate about writing clean, maintainable code and am always striving
-                    to improve my skills and stay up-to-date with the latest technologies. I am a team player and am
-                    able to work well with others to achieve a common goal.</p>
-                <p class="text-secondary">In my free time, I enjoy reading about new technologies and experimenting with
-                    them. I am also an avid traveler and enjoy exploring new cultures and cuisines.</p>
-            </mat-card-content>
-        </mat-card>
-    </div>
+    <mat-card class="mat-card">
+        <mat-card-content>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, culpa rem, velit voluptate rerum
+                doloribus quo voluptatem unde accusantium dolorem nobis tempora harum deserunt, expedita quasi molestias
+                vitae? Dolorem, pariatur.
+            </p>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, culpa rem, velit voluptate rerum
+                doloribus quo voluptatem unde accusantium dolorem nobis tempora harum deserunt, expedita quasi molestias
+                vitae? Dolorem, pariatur.
+            </p>
+            <p class="text-secondary">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, culpa rem, velit voluptate rerum
+                doloribus quo voluptatem unde accusantium dolorem nobis tempora harum deserunt, expedita quasi molestias
+                vitae? Dolorem, pariatur.
+            </p>
+        </mat-card-content>
+    </mat-card>
 </section>

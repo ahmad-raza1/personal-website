@@ -1,8 +1,8 @@
 <div fxLayout="column" class="container">
   <app-header [sidenav]="sidenav"></app-header>
   <mat-sidenav-container class="flex-grow">
-    <mat-sidenav #sidenav mode="over" opened="false">
-      <mat-nav-list>
+    <mat-sidenav #sidenav mode="over" opened="false" class="width-100">
+      <mat-nav-list class="align-center">
         <a mat-list-item [routerLink]="route.path" *ngFor="let route of menuRoutes"
           (click)="sidenav.toggle()">{{route.title}}</a>
       </mat-nav-list>

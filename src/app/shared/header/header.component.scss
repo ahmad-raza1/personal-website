@@ -1,0 +1,8 @@
+.nav-bar {
+    padding: 0 2rem;
+}
+
+::ng-deep .mat-mdc-tab-links {
+    align-items    : center;
+    justify-content: space-between;
+}
