@@ -1,28 +1,14 @@
 <section id="introduction" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="2rem">
     <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center" fxLayoutGap="2rem">
         <mat-card-header fxLayout="column" fxFlexOrder.xs="2">
-            <mat-card-title>Will Smith</mat-card-title>
-            <mat-card-subtitle>Actor | Director | Producer</mat-card-subtitle>
+            <mat-card-title>{{basicInfo.name}}</mat-card-title>
+            <mat-card-subtitle>{{basicInfo.headline}}</mat-card-subtitle>
         </mat-card-header>
         <img fxFlex src="assets/will-smith.jpeg" alt="Will Smith">
     </div>
     <mat-card class="mat-card">
         <mat-card-content>
-            <p class="text-secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, culpa rem, velit voluptate rerum
-                doloribus quo voluptatem unde accusantium dolorem nobis tempora harum deserunt, expedita quasi molestias
-                vitae? Dolorem, pariatur.
-            </p>
-            <p class="text-secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, culpa rem, velit voluptate rerum
-                doloribus quo voluptatem unde accusantium dolorem nobis tempora harum deserunt, expedita quasi molestias
-                vitae? Dolorem, pariatur.
-            </p>
-            <p class="text-secondary">
-                Lorem ipsum dolor sit amet consectetur adipisicing elit. Dolorum, culpa rem, velit voluptate rerum
-                doloribus quo voluptatem unde accusantium dolorem nobis tempora harum deserunt, expedita quasi molestias
-                vitae? Dolorem, pariatur.
-            </p>
+            <p class="text-secondary pre-wrap">{{basicInfo.summary}}</p>
         </mat-card-content>
     </mat-card>
 </section>
