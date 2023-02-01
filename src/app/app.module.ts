@@ -1,4 +1,4 @@
-import { APP_INITIALIZER, NgModule, isDevMode } from '@angular/core';
+import { NgModule, isDevMode } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -9,26 +9,22 @@ import { MatModule } from './mat/mat.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { ServiceWorkerModule } from '@angular/service-worker';
 import { HttpClientModule } from '@angular/common/http';
-import { DataService } from './shared/services/data.service';
+import { LoaderComponent } from './loader/loader.component';
+import { NgxSpinnerModule } from 'ngx-spinner';
 
 @NgModule({
   declarations: [
-    AppComponent
+    AppComponent,
+    LoaderComponent
   ],
-  providers: [
-    {
-      provide: APP_INITIALIZER,
-      multi: true,
-      deps: [DataService],
-      useFactory: (dataService: DataService) => () => dataService.getAppData()
-    }
-  ],
+  providers: [],
   bootstrap: [AppComponent],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FlexLayoutModule,
     HttpClientModule,
+    NgxSpinnerModule,
 
     AppRoutingModule,
     SharedModule,

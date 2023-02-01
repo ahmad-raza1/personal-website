@@ -1,53 +1,47 @@
-import { HttpBackend, HttpClient, HttpParams } from '@angular/common/http';
 import { Injectable } from '@angular/core';
 import { SubSink } from 'subsink';
 import { ApiResponse } from '../models/api-response.model';
-import { Observable } from 'rxjs/internal/Observable';
-import { environment } from 'src/environments/environment';
-import { tap } from 'rxjs';
+import { BehaviorSubject, tap } from 'rxjs';
 import { Data } from '../models/data.model';
 import { BasicInfo, Education, Experience } from '../models/data-interfaces';
+import { Resolve } from '@angular/router';
+import { LoadingResolverService } from 'src/app/loader/loading-resolver.service';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DataService {
+export class DataService implements Resolve<any> {
 
   private appData!: Data;
   private subs: SubSink;
-  private http: HttpClient;
+  loadingSubject$: BehaviorSubject<boolean>;
 
-  constructor(handler: HttpBackend) {
+  constructor(private loadingResolverService: LoadingResolverService) {
     this.subs = new SubSink();
-    this.http = new HttpClient(handler);
+    this.loadingSubject$ = new BehaviorSubject<boolean>(true);
   }
 
-  getAppData(): Promise<any> {
-    return new Promise((resolve, reject) => {
-      const params = new HttpParams()
-        .set('key', environment.apiKey);
-      this.subs.sink = this.http.get<Observable<ApiResponse>>(`${environment.apiBaseUrl}?${params.toString()}`)
-        .pipe(
-          tap((_: any) => console.log('Fetching Data...'))
-        ).subscribe({
-          next: (res: ApiResponse) => {
-            if (res.code === 200) {
-              this.appData = res.data as Data;
-            } else {
-              throw new Error(res.message);
-            }
-            resolve(res);
-          },
-          error: (err: Error) => {
-            reject(err);
-            throw new Error(err.message);
-          },
-          complete: () => {
-            console.log("Success!");
-            this.subs.unsubscribe();
+  resolve() {
+    this.subs.sink = this.loadingResolverService.getAppData()
+      .pipe(
+        tap((_: any) => console.log('Fetching Data...'))
+      ).subscribe({
+        next: (res: ApiResponse) => {
+          if (res.code === 200) {
+            this.appData = res.data as Data;
+          } else {
+            throw new Error(res.message);
           }
-        });
-    });
+        },
+        error: (err: Error) => {
+          throw new Error(err.message);
+        },
+        complete: () => {
+          console.log("Success!");
+          this.subs.unsubscribe();
+          this.loadingSubject$.next(false);
+        }
+      });
   }
 
   // getters

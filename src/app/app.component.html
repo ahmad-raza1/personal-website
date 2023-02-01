@@ -1,4 +1,4 @@
-<div fxLayout="column" class="container">
+<div fxLayout="column" class="container" *ngIf="!(loading$ | async); else loader">
   <app-header [sidenav]="sidenav"></app-header>
   <mat-sidenav-container class="flex-grow">
     <mat-sidenav #sidenav mode="over" opened="false" class="width-100">
@@ -14,3 +14,6 @@
   <mat-divider></mat-divider>
   <app-footer></app-footer>
 </div>
+<ng-template #loader>
+  <app-loader></app-loader>
+</ng-template>
