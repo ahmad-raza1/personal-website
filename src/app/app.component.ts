@@ -16,7 +16,7 @@ export class AppComponent {
   loading$: Observable<boolean>;
 
   constructor(private dataService: DataService) {
-    this.dataService.resolve();
+    this.dataService.getAppData();
     this.loading$ = this.dataService.loadingSubject$.asObservable();
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnInit } from '@angular/core';
 import { DataService } from '../shared/services/data.service';
 import { NgxSpinnerService } from 'ngx-spinner';
 import { Observable } from 'rxjs';
@@ -10,7 +10,7 @@ import { OnDestroy } from '@angular/core';
   templateUrl: './loader.component.html',
   styleUrls: ['./loader.component.scss']
 })
-export class LoaderComponent implements OnInit, OnDestroy {
+export class LoaderComponent implements OnInit, AfterViewInit, OnDestroy {
 
   loading$: Observable<boolean>;
   private subscription: Subscription;
@@ -20,15 +20,19 @@ export class LoaderComponent implements OnInit, OnDestroy {
     this.subscription = new Subscription();
   }
 
-  ngOnInit(): void {
+  ngAfterViewInit(): void {
     this.spinner.show();
+  }
+
+  ngOnInit(): void {
+    // this.spinner.show();
     this.subscription = this.loading$.subscribe({
       next: (show) => {
         if (!show) {
           this.spinner.hide();
         }
       }
-    })
+    });
   }
 
   ngOnDestroy(): void {

@@ -4,25 +4,27 @@ import { ApiResponse } from '../models/api-response.model';
 import { BehaviorSubject, tap } from 'rxjs';
 import { Data } from '../models/data.model';
 import { BasicInfo, Education, Experience } from '../models/data-interfaces';
-import { Resolve } from '@angular/router';
-import { LoadingResolverService } from 'src/app/loader/loading-resolver.service';
+import { environment } from 'src/environments/environment';
+import { HttpClient, HttpParams } from '@angular/common/http';
 
 @Injectable({
   providedIn: 'root'
 })
-export class DataService implements Resolve<any> {
+export class DataService {
 
   private appData!: Data;
   private subs: SubSink;
   loadingSubject$: BehaviorSubject<boolean>;
 
-  constructor(private loadingResolverService: LoadingResolverService) {
+  constructor(private http: HttpClient) {
     this.subs = new SubSink();
     this.loadingSubject$ = new BehaviorSubject<boolean>(true);
   }
 
-  resolve() {
-    this.subs.sink = this.loadingResolverService.getAppData()
+  getAppData(): void {
+    const params = new HttpParams()
+      .set('key', environment.apiKey);
+    this.subs.sink = this.http.get<ApiResponse>(`${environment.apiBaseUrl}?${params.toString()}`)
       .pipe(
         tap((_: any) => console.log('Fetching Data...'))
       ).subscribe({
