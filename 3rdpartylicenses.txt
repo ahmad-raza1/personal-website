@@ -72,6 +72,9 @@ MIT
 @angular/service-worker
 MIT
 
+ngx-spinner
+MIT
+
 rxjs
 Apache-2.0
                                Apache License
