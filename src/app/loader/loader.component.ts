@@ -25,7 +25,6 @@ export class LoaderComponent implements OnInit, AfterViewInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    // this.spinner.show();
     this.subscription = this.loading$.subscribe({
       next: (show) => {
         if (!show) {
