@@ -21,10 +21,11 @@ export class AppComponent implements OnInit {
     this.loading$ = this.dataService.loadingSubject$.asObservable();
   }
 
-  ngOnInit(): void {
-    if ('serviceWorker' in navigator) {
-      navigator.serviceWorker.addEventListener('updatefound', () => {
-        console.log('A new service worker has been found and is being installed.');
+  async ngOnInit(): Promise<void> {
+    const registration = await navigator.serviceWorker.getRegistration();
+    if (registration) {
+      registration.addEventListener('updatefound', () => {
+        console.log('Service Worker update found!');
         caches.delete(environment.cacheName);
         window.location.reload();
       });
