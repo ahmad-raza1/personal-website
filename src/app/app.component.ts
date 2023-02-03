@@ -2,9 +2,8 @@ import { Component, OnDestroy, OnInit } from '@angular/core';
 import { Routes } from '@angular/router';
 import { routes } from 'src/app/menu/menu-routing.module';
 import { DataService } from './shared/services/data.service';
-import { Observable, interval } from 'rxjs';
-import { environment } from 'src/environments/environment';
-import { SwUpdate } from '@angular/service-worker';
+import { Observable, filter, interval, map } from 'rxjs';
+import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
 import { SubSink } from 'subsink';
 
 @Component({
@@ -26,22 +25,34 @@ export class AppComponent implements OnInit, OnDestroy {
   }
 
   ngOnInit(): void {
-    this.subs.sink = this.swUpdate.available.subscribe(_ => {
-      console.log('A new version of the app is available.');
-      caches.delete(environment.cacheName).then(_ => window.location.reload());
-    });
 
     if (this.swUpdate.isEnabled) {
       // Required to enable updates on Windows and ios.
       this.swUpdate.activateUpdate();
 
+      this.subs.sink = this.swUpdate.versionUpdates.pipe(
+        filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
+        map(evt => ({
+          type: 'UPDATE_AVAILABLE',
+          current: evt.currentVersion,
+          available: evt.latestVersion
+        })))
+        .subscribe(version => {
+          console.log(`Updating to a new version, ${JSON.stringify(version)}`);
+          window.location.reload();
+        });
+
       // emits value in sequence every 1 minute  
-      this.subs.sink = interval(1000 * 60).subscribe(_ => {
-        this.swUpdate.checkForUpdate().then(() => {
+      this.subs.sink = interval(60 * 1000).subscribe(_ => {
+        this.swUpdate.checkForUpdate().then(available => {
           console.log('Checking for updates...');
+          if (available) {
+            console.log("Update Found!");
+          }
         });
       });
     }
+
   }
 
   ngOnDestroy(): void {
