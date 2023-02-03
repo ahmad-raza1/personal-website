@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1675406327259,
+  "timestamp": 1675406750346,
   "index": "https://ahmed-raza.com/index.html",
   "assetGroups": [
     {
@@ -100,14 +100,13 @@
     {
       "name": "api",
       "patterns": [
-        "https:\\/\\/script\\.google\\.com\\/macros\\/s\\/AKfycbzz7oiWBFBwynQCr8lyX_xzrlAg1aGldD6plTfyr_d5TfM5oCARm0H32QdBfHAPiu3UVg\\/exec"
+        "https:\\/\\/script\\.google\\.com\\/macros\\/s\\/AKfycbzz7oiWBFBwynQCr8lyX_xzrlAg1aGldD6plTfyr_d5TfM5oCARm0H32QdBfHAPiu3UVg\\/exec\\?key=YOUR_SECRET_KEY"
       ],
       "strategy": "performance",
       "maxSize": 100,
       "maxAge": 60000,
       "cacheQueryOptions": {
-        "ignoreVary": true,
-        "ignoreSearch": true
+        "ignoreVary": true
       },
       "version": 3
     }
