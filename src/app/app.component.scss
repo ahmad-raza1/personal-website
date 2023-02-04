@@ -1,5 +1,6 @@
 .container {
-    height: -webkit-fill-available;
+    height    : -webkit-fill-available;
+    overflow-x: hidden;
 }
 
 .flex-grow {
