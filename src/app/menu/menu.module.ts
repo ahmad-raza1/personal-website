@@ -3,14 +3,14 @@ import { CommonModule } from '@angular/common';
 
 import { MenuRoutingModule } from './menu-routing.module';
 import { HomeComponent } from './home/home.component';
-import { AboutComponent } from './about/about.component';
 import { MatModule } from '../mat/mat.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
+import { SkillsComponent } from './skills/skills.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    AboutComponent
+    SkillsComponent
   ],
   imports: [
     CommonModule,

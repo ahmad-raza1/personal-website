@@ -6,7 +6,7 @@
 
         <nav mat-tab-nav-bar class="nav-bar" [backgroundColor]="background" [tabPanel]="tabPanel" fxLayout="row"
             fxFlexFill fxLayoutAlign="space-between center">
-            <span>Custom Toolbar</span>
+            <span class="website-title">{{websiteTitle}}</span>
             <div fxHide="true" fxShow.gt-sm="true" fxLayout="row">
                 <a mat-tab-link [routerLink]="route.path" *ngFor="let route of menuRoutes">{{route.title}}</a>
             </div>

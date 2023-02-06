@@ -1,0 +1,13 @@
+.grid-container {
+    display                 : -ms-grid;
+    display                 : grid;
+    // grid-template-columns: repeat(auto-fill, minmax(140px, 1fr)); 
+    -ms-grid-columns        : minmax(140px, 1fr) [auto-fit];
+    grid-template-columns   : repeat(auto-fit, minmax(140px, 1fr));
+    grid-gap                : 1rem;
+    padding                 : 2rem;
+}
+
+i.fa-3x {
+    opacity: 0.8;
+}

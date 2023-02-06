@@ -6,3 +6,10 @@
     align-items    : center;
     justify-content: space-between;
 }
+
+.website-title {
+    text-transform: uppercase;
+    letter-spacing: 3px;
+    border-bottom : 3px solid;
+    position      : relative;
+}

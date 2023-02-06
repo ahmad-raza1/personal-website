@@ -24,3 +24,8 @@ export interface Experience {
     url: string
 }
 
+export interface Skill {
+    name: string,
+    faIcon: string
+}
+
