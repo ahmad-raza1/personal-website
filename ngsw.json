@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1675667418923,
+  "timestamp": 1675667651181,
   "index": "https://ahmed-raza.com/index.html",
   "assetGroups": [
     {
@@ -14,7 +14,7 @@
         "https://ahmed-raza.com/825.be6d4db16c81ead8.js",
         "https://ahmed-raza.com/favicon.ico",
         "https://ahmed-raza.com/index.html",
-        "https://ahmed-raza.com/main.fddc6d4cb038976b.js",
+        "https://ahmed-raza.com/main.4763e915618461af.js",
         "https://ahmed-raza.com/manifest.webmanifest",
         "https://ahmed-raza.com/polyfills.baa8e7eb7cd00f8d.js",
         "https://ahmed-raza.com/runtime.9b1fde136377aefd.js",
@@ -177,8 +177,8 @@
     "https://ahmed-raza.com/assets/ngx-spinner/animations/triangle-skew-spin.css": "cf1f3eaa9f428f64f58cbeeaea8da79b8b741092",
     "https://ahmed-raza.com/assets/will-smith.jpeg": "9eac89443b14c02d8961c15c7555c803f7784a85",
     "https://ahmed-raza.com/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://ahmed-raza.com/index.html": "21302c162121f0ea88576a79ae709fe6f5b8b77d",
-    "https://ahmed-raza.com/main.fddc6d4cb038976b.js": "4568cdcfbf7688f6848b295374a32cb4057da9b0",
+    "https://ahmed-raza.com/index.html": "6cd1667eefd919f344df7708dc81952cc0023052",
+    "https://ahmed-raza.com/main.4763e915618461af.js": "22aed5a02554661be3db70173cbd376fcfcfd3aa",
     "https://ahmed-raza.com/manifest.webmanifest": "33c8f3b246940ec0f9cb6e6e18f324c9e02e188e",
     "https://ahmed-raza.com/polyfills.baa8e7eb7cd00f8d.js": "e82f0fe52fa6d937d114eaba8decdd15b8edd4b0",
     "https://ahmed-raza.com/runtime.9b1fde136377aefd.js": "bc3079db12dc3f5ff65ab35e3e3748a2c87eb2fd",
