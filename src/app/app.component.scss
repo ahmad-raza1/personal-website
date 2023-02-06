@@ -8,3 +8,8 @@
     overflow                  : auto;
     -webkit-overflow-scrolling: touch;
 }
+
+.sidenav-content {
+    max-height: -webkit-fill-available;
+    padding   : 2rem;
+}
