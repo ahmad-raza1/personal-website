@@ -32,12 +32,15 @@
       "version": 1,
       "name": "api",
       "urls": [
-        "https://script.google.com/macros/s/AKfycbzz7oiWBFBwynQCr8lyX_xzrlAg1aGldD6plTfyr_d5TfM5oCARm0H32QdBfHAPiu3UVg/exec?key=YOUR_SECRET_KEY"
+        "https://script.google.com/macros/s/AKfycbzz7oiWBFBwynQCr8lyX_xzrlAg1aGldD6plTfyr_d5TfM5oCARm0H32QdBfHAPiu3UVg/exec"
       ],
       "cacheConfig": {
         "strategy": "performance",
         "maxSize": 100,
         "maxAge": "5m"
+      },
+      "cacheQueryOptions": {
+        "ignoreSearch": false
       }
     }
   ]

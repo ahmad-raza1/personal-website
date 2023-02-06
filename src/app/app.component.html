@@ -1,7 +1,8 @@
 <div fxLayout="column" class="container" *ngIf="!(loading$ | async); else loader">
   <app-header [sidenav]="sidenav"></app-header>
-  <mat-sidenav-container class="flex-grow">
-    <mat-sidenav #sidenav mode="over" opened="false" class="width-100">
+  <mat-sidenav-container class="flex-grow" [hasBackdrop]="false">
+    <mat-sidenav #sidenav mode="over" opened="false" class="width-100" [(opened)]="sidenavOpen" fixedInViewport
+      fixedTopGap="56" autosize>
       <mat-nav-list class="align-center">
         <a mat-list-item [routerLink]="route.path" *ngFor="let route of menuRoutes"
           (click)="sidenav.toggle()">{{route.title}}</a>

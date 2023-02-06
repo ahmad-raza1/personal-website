@@ -17,6 +17,7 @@ export class AppComponent implements OnInit, OnDestroy {
   menuRoutes: Routes = routes;
   loading$: Observable<boolean>;
   private subs: SubSink;
+  sidenavOpen: boolean = false;
 
   constructor(private dataService: DataService, private swUpdate: SwUpdate) {
     this.dataService.getAppData();
