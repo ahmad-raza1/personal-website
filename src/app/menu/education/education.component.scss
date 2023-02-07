@@ -1,0 +1,16 @@
+#education {
+    padding   : 2rem;
+    min-height: 100%;
+}
+
+.pd-16 {
+    padding: 16px;
+}
+
+::ng-deep span.mdc-list-item__content>span:first-child {
+    white-space: normal;
+}
+
+mat-list.mdc-list {
+    padding: 0;
+}

@@ -1,6 +1,6 @@
-<div class="grid-container">
+<section class="grid-container">
     <mat-card *ngFor="let skill of skills">
-        <mat-card-header fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="6px">
+        <mat-card-header fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="1rem">
             <mat-card-content>{{skill.name}}</mat-card-content>
             <mat-card-title>
                 <i class="fa-3x fa-{{skill.iconType}} fa-{{skill.faIcon}}" aria-hidden="true"
@@ -11,4 +11,4 @@
             </mat-card-title>
         </mat-card-header>
     </mat-card>
-</div>
+</section>

@@ -1,4 +1,4 @@
-<section id="introduction" fxLayout="column" fxLayoutAlign="space-evenly center" fxLayoutGap="2rem">
+<section id="introduction" fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="2rem">
     <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center" fxLayoutGap="2rem">
         <mat-card-header fxLayout="column" fxFlexOrder.xs="2">
             <mat-card-title>{{basicInfo.name}}</mat-card-title>
@@ -6,9 +6,11 @@
         </mat-card-header>
         <img fxFlex fxFlex.xs="80" src="assets/will-smith.jpeg" alt="Will Smith">
     </div>
-    <mat-card class="mat-card">
-        <mat-card-content>
-            <p class="text-secondary pre-wrap">{{basicInfo.summary}}</p>
-        </mat-card-content>
-    </mat-card>
+    <div fxLayout="row" fxLayoutAlign="center center">
+        <mat-card class="mat-card" fxFlex="90" fxFlex.lt-md="100">
+            <mat-card-content>
+                <p class="text-secondary pre-wrap">{{basicInfo.summary}}</p>
+            </mat-card-content>
+        </mat-card>
+    </div>
 </section>

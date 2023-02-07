@@ -6,11 +6,13 @@ import { HomeComponent } from './home/home.component';
 import { MatModule } from '../mat/mat.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SkillsComponent } from './skills/skills.component';
+import { EducationComponent } from './education/education.component';
 
 @NgModule({
   declarations: [
     HomeComponent,
-    SkillsComponent
+    SkillsComponent,
+    EducationComponent
   ],
   imports: [
     CommonModule,
