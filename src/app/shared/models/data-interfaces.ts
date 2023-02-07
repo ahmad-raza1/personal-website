@@ -26,6 +26,6 @@ export interface Experience {
 
 export interface Skill {
     name: string,
-    faIcon: string
+    faIcon: string,
+    iconType: string
 }
-

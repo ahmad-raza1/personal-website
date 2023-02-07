@@ -2,7 +2,13 @@
     <mat-card *ngFor="let skill of skills">
         <mat-card-header fxLayout="column" fxLayoutAlign="space-between center" fxLayoutGap="6px">
             <mat-card-content>{{skill.name}}</mat-card-content>
-            <mat-card-title><i class="fa-3x fa-brands fa-{{ skill.faIcon }}" aria-hidden="true"></i></mat-card-title>
+            <mat-card-title>
+                <i class="fa-3x fa-{{skill.iconType}} fa-{{skill.faIcon}}" aria-hidden="true"
+                    *ngIf="skill.faIcon; else defaultIcon"></i>
+                <ng-template #defaultIcon>
+                    <i class="fa-3x fa-solid fa-{{skill.name[0] | lowercase}}" aria-hidden="true"></i>
+                </ng-template>
+            </mat-card-title>
         </mat-card-header>
     </mat-card>
 </div>
