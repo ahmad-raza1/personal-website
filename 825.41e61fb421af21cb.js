@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkmy_personal_website=self.webpackChunkmy_personal_website||[]).push([[825],{2825:(s,u,_)=>{_.r(u),_.d(u,{MenuModule:()=>t});var l=_(6895),M=_(6699),a=_(1119),E=_(9814),o=_(4650);let t=(()=>{class n{}return n.\u0275fac=function(m){return new(m||n)},n.\u0275mod=o.oAB({type:n}),n.\u0275inj=o.cJS({imports:[l.ez,M.W,E.o9,a.R]}),n})()}}]);
