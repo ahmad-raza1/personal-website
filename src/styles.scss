@@ -13,6 +13,18 @@ body {
     font-family   : Roboto, "Helvetica Neue", sans-serif;
 }
 
+/****
+Angular Material Components Customizations
+****/
+
+mat-card {
+    border-radius: 8px !important;
+}
+
+/****
+Other Styles
+****/
+
 .width-100 {
     width: 100%;
 }
