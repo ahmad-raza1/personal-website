@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1675834369545,
+  "timestamp": 1675835977931,
   "index": "https://ahmed-raza.com/index.html",
   "assetGroups": [
     {
@@ -14,11 +14,11 @@
         "https://ahmed-raza.com/825.41e61fb421af21cb.js",
         "https://ahmed-raza.com/favicon.ico",
         "https://ahmed-raza.com/index.html",
-        "https://ahmed-raza.com/main.f88b75cefabadcce.js",
+        "https://ahmed-raza.com/main.f0a4e0c3696791c2.js",
         "https://ahmed-raza.com/manifest.webmanifest",
         "https://ahmed-raza.com/polyfills.baa8e7eb7cd00f8d.js",
         "https://ahmed-raza.com/runtime.6faf41b8034d2944.js",
-        "https://ahmed-raza.com/styles.158c3ee5c2a59784.css"
+        "https://ahmed-raza.com/styles.2fbdd5edb39ddfe9.css"
       ],
       "patterns": []
     },
@@ -177,12 +177,12 @@
     "https://ahmed-raza.com/assets/ngx-spinner/animations/timer.css": "72ed9ce1784bb655cf8cf4d2a761b82c3e0501b1",
     "https://ahmed-raza.com/assets/ngx-spinner/animations/triangle-skew-spin.css": "cf1f3eaa9f428f64f58cbeeaea8da79b8b741092",
     "https://ahmed-raza.com/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://ahmed-raza.com/index.html": "0dd26aee426bd5852dc01033b83b87305bc3e672",
-    "https://ahmed-raza.com/main.f88b75cefabadcce.js": "4769cffc1004dbbc00bed23aa8f92b73a27e2835",
+    "https://ahmed-raza.com/index.html": "a83300469eb7d61229e378093f205c767214f6cb",
+    "https://ahmed-raza.com/main.f0a4e0c3696791c2.js": "3c72af0884f929fb7bc1912d0fe555797f0a29b5",
     "https://ahmed-raza.com/manifest.webmanifest": "33c8f3b246940ec0f9cb6e6e18f324c9e02e188e",
     "https://ahmed-raza.com/polyfills.baa8e7eb7cd00f8d.js": "e82f0fe52fa6d937d114eaba8decdd15b8edd4b0",
     "https://ahmed-raza.com/runtime.6faf41b8034d2944.js": "f97109dd9923408ce22baa553ec2f27a09792d81",
-    "https://ahmed-raza.com/styles.158c3ee5c2a59784.css": "b176b6f9eb6990ec000b90fb5447c3af7e0c39a3"
+    "https://ahmed-raza.com/styles.2fbdd5edb39ddfe9.css": "7c759a26dab859a01a6f60eda2bdc8a38c28ce10"
   },
   "navigationUrls": [
     {
