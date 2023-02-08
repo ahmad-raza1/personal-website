@@ -1,5 +1,6 @@
-.not-found {
-    padding: 1rem;
+#not-found {
+    padding   : 2rem;
+    min-height: 100%;
 }
 
 .not-found__icon {
@@ -12,6 +13,7 @@
 .not-found__title {
     font-size    : 36px;
     margin-bottom: 16px;
+    text-align   : center;
 }
 
 .not-found__text {
