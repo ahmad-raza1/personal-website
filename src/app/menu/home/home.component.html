@@ -4,7 +4,10 @@
             <mat-card-title>{{basicInfo.name}}</mat-card-title>
             <mat-card-subtitle>{{basicInfo.headline}}</mat-card-subtitle>
         </mat-card-header>
-        <img fxFlex fxFlex.xs="80" height="250" width="250" src="assets/ahmad-raza.png" alt="Ahmad Raza">
+        <picture fxFlex fxFlex.xs="80">
+            <source srcset="assets/ahmad-raza.webp" type="image/webp" height="250" width="250">
+            <img src="assets/ahmad-raza.png" alt="Ahmad Raza" height="250" width="250">
+        </picture>
     </div>
     <div fxLayout="row" fxLayoutAlign="center center">
         <mat-card fxFlex="90" fxFlex.lt-md="100" class="pd-1-rem">
