@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1675926310004,
+  "timestamp": 1675926607212,
   "index": "https://ahmed-raza.com/index.html",
   "assetGroups": [
     {
@@ -31,7 +31,6 @@
       },
       "urls": [
         "https://ahmed-raza.com/assets/ahmad-raza.png",
-        "https://ahmed-raza.com/assets/css/font-awesome/font-awesome-6.2.1.min.css",
         "https://ahmed-raza.com/assets/css/ngx-spinner/ball-atom.css",
         "https://ahmed-raza.com/assets/icons/icon-128x128.png",
         "https://ahmed-raza.com/assets/icons/icon-144x144.png",
@@ -68,7 +67,6 @@
   "hashTable": {
     "https://ahmed-raza.com/825.41e61fb421af21cb.js": "ed57896941dd46e73e4ce02fe426f385503b382d",
     "https://ahmed-raza.com/assets/ahmad-raza.png": "ca20d6bef1a79c1daa08dbc8828ebc3e86976551",
-    "https://ahmed-raza.com/assets/css/font-awesome/font-awesome-6.2.1.min.css": "78531a8846b25d233a3384526a30986c06cd9ae8",
     "https://ahmed-raza.com/assets/css/ngx-spinner/ball-atom.css": "1ee96b744c5a1a2c1bc653ec130cc7db535b508e",
     "https://ahmed-raza.com/assets/icons/icon-128x128.png": "dae3b6ed49bdaf4327b92531d4b5b4a5d30c7532",
     "https://ahmed-raza.com/assets/icons/icon-144x144.png": "b0bd89982e08f9bd2b642928f5391915b74799a7",
