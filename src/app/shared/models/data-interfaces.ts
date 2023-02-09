@@ -29,3 +29,9 @@ export interface Skill {
     faIcon: string,
     iconType: string
 }
+
+export interface SocialLink {
+    url: string,
+    faIcon: string,
+    color: string
+}

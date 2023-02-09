@@ -3,7 +3,7 @@ import { SubSink } from 'subsink';
 import { ApiResponse } from '../models/api-response.model';
 import { BehaviorSubject, tap } from 'rxjs';
 import { Data } from '../models/data.model';
-import { BasicInfo, Education, Experience, Skill } from '../models/data-interfaces';
+import { BasicInfo, Education, Experience, Skill, SocialLink } from '../models/data-interfaces';
 import { HttpClient, HttpParams } from '@angular/common/http';
 import { environment } from 'src/environments/environment';
 
@@ -52,4 +52,5 @@ export class DataService {
   get education(): Education | Array<Education> { return this.appData.education; }
   get experience(): Experience | Array<Experience> { return this.appData.experience; }
   get skills(): Array<Skill> { return this.appData.skills; }
+  get socialLinks(): Array<SocialLink> { return this.appData.socialLinks; }
 }

@@ -9,6 +9,15 @@
             <span class="website-title">{{websiteTitle}}</span>
             <div fxHide="true" fxShow.gt-sm="true" fxLayout="row">
                 <a mat-tab-link [routerLink]="route.path" *ngFor="let route of menuRoutes">{{route.title}}</a>
+
+                <mat-divider vertical class="nav-mat-divider"></mat-divider>
+
+                <span fxLayout="row" fxLayoutAlign="start center">
+                    <a *ngFor="let item of socialLinks" [href]="item.url" target="_blank">
+                        <i class="fa-lg fa-brands fa-{{item.faIcon}} social-link-icon"
+                            [ngStyle]="{'color': item.color}"></i>
+                    </a>
+                </span>
             </div>
         </nav>
         <mat-tab-nav-panel #tabPanel></mat-tab-nav-panel>
