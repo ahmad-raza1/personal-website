@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1675929020830,
+  "timestamp": 1675954176430,
   "index": "https://ahmed-raza.com/index.html",
   "assetGroups": [
     {
@@ -14,11 +14,11 @@
         "https://ahmed-raza.com/825.41e61fb421af21cb.js",
         "https://ahmed-raza.com/favicon.ico",
         "https://ahmed-raza.com/index.html",
-        "https://ahmed-raza.com/main.b38d3c1cd27cf49b.js",
+        "https://ahmed-raza.com/main.d7e1468cf3b0aa3d.js",
         "https://ahmed-raza.com/manifest.webmanifest",
         "https://ahmed-raza.com/polyfills.baa8e7eb7cd00f8d.js",
         "https://ahmed-raza.com/runtime.6faf41b8034d2944.js",
-        "https://ahmed-raza.com/styles.ed97f97ffce1bca6.css"
+        "https://ahmed-raza.com/styles.78f1931eb7de30a8.css"
       ],
       "patterns": []
     },
@@ -91,12 +91,12 @@
     "https://ahmed-raza.com/fa-v4compatibility.200e567a093eee3f.ttf": "bb11949937f5f6eb90210bb6947c479a00e418ab",
     "https://ahmed-raza.com/fa-v4compatibility.e993637ad6526525.woff2": "ba41d5ea9eadeea164740766516800b41f4830e7",
     "https://ahmed-raza.com/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://ahmed-raza.com/index.html": "2838d722ff35a4faeb87532003d4f1d19b0e5722",
-    "https://ahmed-raza.com/main.b38d3c1cd27cf49b.js": "35b30a028bc7746715cc99cc357cadb39e940541",
+    "https://ahmed-raza.com/index.html": "eafada9911c0563e2ecd434d1ee1f7574b7e4beb",
+    "https://ahmed-raza.com/main.d7e1468cf3b0aa3d.js": "71116560383846daadade4c11f3ce7be84e5a2cb",
     "https://ahmed-raza.com/manifest.webmanifest": "33c8f3b246940ec0f9cb6e6e18f324c9e02e188e",
     "https://ahmed-raza.com/polyfills.baa8e7eb7cd00f8d.js": "e82f0fe52fa6d937d114eaba8decdd15b8edd4b0",
     "https://ahmed-raza.com/runtime.6faf41b8034d2944.js": "f97109dd9923408ce22baa553ec2f27a09792d81",
-    "https://ahmed-raza.com/styles.ed97f97ffce1bca6.css": "7effd5d800be276dd3e7e16c300aef7b4ba97d16"
+    "https://ahmed-raza.com/styles.78f1931eb7de30a8.css": "37a9e71fa42a35ce11fb6c349846c5b8bc6ee663"
   },
   "navigationUrls": [
     {
