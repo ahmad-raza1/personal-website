@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1675926607212,
+  "timestamp": 1675927473424,
   "index": "https://ahmed-raza.com/index.html",
   "assetGroups": [
     {
@@ -18,7 +18,7 @@
         "https://ahmed-raza.com/manifest.webmanifest",
         "https://ahmed-raza.com/polyfills.baa8e7eb7cd00f8d.js",
         "https://ahmed-raza.com/runtime.6faf41b8034d2944.js",
-        "https://ahmed-raza.com/styles.5d19d356e709bb4b.css"
+        "https://ahmed-raza.com/styles.ed97f97ffce1bca6.css"
       ],
       "patterns": []
     },
@@ -40,10 +40,14 @@
         "https://ahmed-raza.com/assets/icons/icon-512x512.png",
         "https://ahmed-raza.com/assets/icons/icon-72x72.png",
         "https://ahmed-raza.com/assets/icons/icon-96x96.png",
-        "https://ahmed-raza.com/fontawesome-webfont.8a7cb27d142e3e19.ttf",
-        "https://ahmed-raza.com/fontawesome-webfont.cf011583fb81df9f.woff",
-        "https://ahmed-raza.com/fontawesome-webfont.da909aa098b0ee2d.svg",
-        "https://ahmed-raza.com/fontawesome-webfont.e9955780856cf8aa.woff2"
+        "https://ahmed-raza.com/fa-brands-400.672e913fb6f186fb.woff2",
+        "https://ahmed-raza.com/fa-brands-400.d67d1219bc30e68d.ttf",
+        "https://ahmed-raza.com/fa-regular-400.073940ed482e0363.ttf",
+        "https://ahmed-raza.com/fa-regular-400.c7c7429f84794f4d.woff2",
+        "https://ahmed-raza.com/fa-solid-900.c9f6e41813989c48.ttf",
+        "https://ahmed-raza.com/fa-solid-900.d5d28b783e396c28.woff2",
+        "https://ahmed-raza.com/fa-v4compatibility.200e567a093eee3f.ttf",
+        "https://ahmed-raza.com/fa-v4compatibility.e993637ad6526525.woff2"
       ],
       "patterns": []
     }
@@ -76,17 +80,21 @@
     "https://ahmed-raza.com/assets/icons/icon-512x512.png": "559d9c4318b45a1f2b10596bbb4c960fe521dbcc",
     "https://ahmed-raza.com/assets/icons/icon-72x72.png": "c457e56089a36952cd67156f9996bc4ce54a5ed9",
     "https://ahmed-raza.com/assets/icons/icon-96x96.png": "3914125a4b445bf111c5627875fc190f560daa41",
+    "https://ahmed-raza.com/fa-brands-400.672e913fb6f186fb.woff2": "f1234dff4095688c945513d40751012b70462c03",
+    "https://ahmed-raza.com/fa-brands-400.d67d1219bc30e68d.ttf": "04e58bdb86afc218a250948fd920cba85134ed78",
+    "https://ahmed-raza.com/fa-regular-400.073940ed482e0363.ttf": "59589e2b771619f6fa6ec2939c9b6b15d32794c3",
+    "https://ahmed-raza.com/fa-regular-400.c7c7429f84794f4d.woff2": "66085d2542ab75f524179a14f6ecd36a3f6f851b",
+    "https://ahmed-raza.com/fa-solid-900.c9f6e41813989c48.ttf": "0cd050f6e9b8becd75bd9edc86f5d5c00229ae0e",
+    "https://ahmed-raza.com/fa-solid-900.d5d28b783e396c28.woff2": "ec2f4e5f311462dce67b8f354e5bb9a68c12cf58",
+    "https://ahmed-raza.com/fa-v4compatibility.200e567a093eee3f.ttf": "bb11949937f5f6eb90210bb6947c479a00e418ab",
+    "https://ahmed-raza.com/fa-v4compatibility.e993637ad6526525.woff2": "ba41d5ea9eadeea164740766516800b41f4830e7",
     "https://ahmed-raza.com/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://ahmed-raza.com/fontawesome-webfont.8a7cb27d142e3e19.ttf": "13b1eab65a983c7a73bc7997c479d66943f7c6cb",
-    "https://ahmed-raza.com/fontawesome-webfont.cf011583fb81df9f.woff": "28b782240b3e76db824e12c02754a9731a167527",
-    "https://ahmed-raza.com/fontawesome-webfont.da909aa098b0ee2d.svg": "98a8aa5cf7d62c2eff5f07ede8d844b874ef06ed",
-    "https://ahmed-raza.com/fontawesome-webfont.e9955780856cf8aa.woff2": "d6f48cba7d076fb6f2fd6ba993a75b9dc1ecbf0c",
-    "https://ahmed-raza.com/index.html": "5d51968c7cfa251bd77c1780cef66eedb553a970",
+    "https://ahmed-raza.com/index.html": "9d1d362592cf07480375a15f4b7b0da30406916d",
     "https://ahmed-raza.com/main.85da8bf6f34e8dc1.js": "630b7811b80120420f5dbb823a2430785d677974",
     "https://ahmed-raza.com/manifest.webmanifest": "33c8f3b246940ec0f9cb6e6e18f324c9e02e188e",
     "https://ahmed-raza.com/polyfills.baa8e7eb7cd00f8d.js": "e82f0fe52fa6d937d114eaba8decdd15b8edd4b0",
     "https://ahmed-raza.com/runtime.6faf41b8034d2944.js": "f97109dd9923408ce22baa553ec2f27a09792d81",
-    "https://ahmed-raza.com/styles.5d19d356e709bb4b.css": "ce273a4a190e3bb9e018b2238c699a22cb49206d"
+    "https://ahmed-raza.com/styles.ed97f97ffce1bca6.css": "7effd5d800be276dd3e7e16c300aef7b4ba97d16"
   },
   "navigationUrls": [
     {
