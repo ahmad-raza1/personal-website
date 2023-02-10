@@ -1,8 +1,8 @@
-import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
+import { ApplicationRef, Component, OnDestroy, OnInit } from '@angular/core';
 import { Routes } from '@angular/router';
 import { routes } from 'src/app/menu/menu-routing.module';
 import { DataService } from './shared/services/data.service';
-import { Observable, filter, interval, map } from 'rxjs';
+import { Observable, concat, filter, first, interval, map } from 'rxjs';
 import { SwUpdate, VersionReadyEvent } from '@angular/service-worker';
 import { SubSink } from 'subsink';
 
@@ -11,7 +11,7 @@ import { SubSink } from 'subsink';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
+export class AppComponent implements OnInit, OnDestroy {
 
   title = 'my-personal-website';
   menuRoutes: Routes = routes;
@@ -20,18 +20,14 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   sidenavOpen: boolean = false;
   isViewInit: boolean = false;
 
-  constructor(private dataService: DataService, private swUpdate: SwUpdate) {
+  constructor(private dataService: DataService, private appRef: ApplicationRef, private swUpdate: SwUpdate) {
+
     this.dataService.getAppData();
     this.loading$ = this.dataService.loadingSubject$.asObservable();
     this.subs = new SubSink();
-  }
 
-  ngOnInit(): void {
-
+    // Service Worker
     if (this.swUpdate.isEnabled) {
-      // activate update
-      this.swUpdate.activateUpdate();
-
       // whenever a new version is ready for activation
       this.subs.sink = this.swUpdate.versionUpdates.pipe(
         filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
@@ -42,21 +38,28 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
         })))
         .subscribe(version => {
           console.log(`Activating the update: ${JSON.stringify(version)}`);
-          window.location.reload();
+          // reload the page to update to the latest version.
+          document.location.reload();
         });
 
-      // checking for an update after every one minute 
-      this.subs.sink = interval(60 * 1000).subscribe(_ => {
-        console.log('Checking for an update...');
-        this.swUpdate.checkForUpdate();
+      // Allow the app to stabilize first, before starting
+      // polling for updates with `interval()`.
+      const appIsStable$ = appRef.isStable.pipe(first(isStable => isStable === true));
+      const everyFiveMins$ = interval(5 * 60 * 1000);
+      const everyFiveMinsOnceAppIsStable$ = concat(appIsStable$, everyFiveMins$);
+
+      this.subs.sink = everyFiveMinsOnceAppIsStable$.subscribe(async () => {
+        try {
+          const updateFound = await swUpdate.checkForUpdate();
+          console.log(updateFound ? 'A new version is available.' : 'Already on the latest version.');
+        } catch (err) {
+          console.error('Failed to check for updates:', err);
+        }
       });
     }
-
   }
 
-  ngAfterViewInit(): void {
-    this.isViewInit = true;
-  }
+  ngOnInit(): void { }
 
   ngOnDestroy(): void {
     this.subs.unsubscribe();

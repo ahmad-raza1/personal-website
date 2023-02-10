@@ -1,8 +1,8 @@
 <section id="introduction" fxLayout="column" fxLayoutAlign="space-around center" fxLayoutGap="2rem">
     <div fxLayout="row" fxLayout.xs="column" fxLayoutAlign="space-between center" fxLayoutGap="2rem">
-        <mat-card-header fxLayout="column" fxFlexOrder.xs="2" class="pre-wrap">
+        <mat-card-header fxLayout="column" fxFlexOrder.xs="2">
             <mat-card-title>{{basicInfo.name}}</mat-card-title>
-            <mat-card-subtitle>{{basicInfo.headline}}</mat-card-subtitle>
+            <mat-card-subtitle class="pre-wrap">{{basicInfo.headline}}</mat-card-subtitle>
         </mat-card-header>
         <picture fxFlex fxFlex.xs="80">
             <source srcset="assets/ahmad-raza.webp" type="image/webp" height="250" width="250">

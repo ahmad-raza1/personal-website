@@ -1,5 +1,5 @@
 <ng-container *ngIf="!(loading$ | async); else loader">
-  <div fxLayout="column" class="container" [ngClass]="{ 'custom-scrollbar': isViewInit }">
+  <div fxLayout="column" class="container custom-scrollbar">
     <app-header [sidenav]="sidenav"></app-header>
     <mat-sidenav-container class="flex-grow" [hasBackdrop]="false">
       <mat-sidenav #sidenav mode="over" opened="false" class="width-100" [(opened)]="sidenavOpen" fixedInViewport
