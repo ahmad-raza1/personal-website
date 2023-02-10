@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1676065527938,
+  "timestamp": 1676066354372,
   "index": "https://ahmed-raza.com/index.html",
   "assetGroups": [
     {
@@ -93,7 +93,7 @@
     "https://ahmed-raza.com/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
     "https://ahmed-raza.com/index.html": "eb1e30cd521ff8b1f1bd858a66e622bdf6a949a1",
     "https://ahmed-raza.com/main.dc5bb92749a64c7b.js": "caf742e52b53b82b5817a79abc101d6ad725c2ce",
-    "https://ahmed-raza.com/manifest.webmanifest": "828c147d625c9c97eadaaa3c16ecfe4e58c99dd3",
+    "https://ahmed-raza.com/manifest.webmanifest": "b3d968f75f1dcd9fbd49deb9d18824332a935541",
     "https://ahmed-raza.com/polyfills.baa8e7eb7cd00f8d.js": "e82f0fe52fa6d937d114eaba8decdd15b8edd4b0",
     "https://ahmed-raza.com/runtime.6faf41b8034d2944.js": "f97109dd9923408ce22baa553ec2f27a09792d81",
     "https://ahmed-raza.com/styles.172aa56d8fb0126e.css": "c28c21a28aebc27fcb84a68f6ffd20ba74229dc9"
