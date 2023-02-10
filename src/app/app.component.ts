@@ -29,9 +29,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit(): void {
 
     if (this.swUpdate.isEnabled) {
-      // Required to enable updates on Windows and ios.
-      this.swUpdate.activateUpdate();
-
+      // whenever a new version is ready for activation
       this.subs.sink = this.swUpdate.versionUpdates.pipe(
         filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
         map(evt => ({
@@ -40,18 +38,14 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
           available: evt.latestVersion
         })))
         .subscribe(version => {
-          console.log(`Updating to a new version, ${JSON.stringify(version)}`);
-          window.location.reload();
+          console.log(`Activating the update: ${JSON.stringify(version)}`);
+          this.swUpdate.activateUpdate().then(_ => window.location.reload());
         });
 
-      // emits value in sequence every 1 minute  
+      // checking for an update after every one minute 
       this.subs.sink = interval(60 * 1000).subscribe(_ => {
-        this.swUpdate.checkForUpdate().then(available => {
-          console.log('Checking for updates...');
-          if (available) {
-            console.log("Update Found!");
-          }
-        });
+        console.log('Checking for an update...');
+        this.swUpdate.checkForUpdate();
       });
     }
 
