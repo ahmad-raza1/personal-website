@@ -26,26 +26,29 @@ Custom Scrollbar
 
 $indigo-color-scroll: rgb(33, 0, 75);
 
-/* width */
-::-webkit-scrollbar {
-    width: 8px;
-}
+.custom-scrollbar {
 
-/* Track */
-::-webkit-scrollbar-track {
-    box-shadow   : inset 1em 1em rgba($color: $indigo-color-scroll, $alpha: 0.1);
-    border-radius: 10px;
-}
+    /* width */
+    ::-webkit-scrollbar {
+        width: 8px;
+    }
 
-/* Handle */
-::-webkit-scrollbar-thumb {
-    background   : rgba($color: $indigo-color-scroll, $alpha: 0.2);
-    border-radius: 10px;
-}
+    /* Track */
+    ::-webkit-scrollbar-track {
+        box-shadow   : inset 1em 1em rgba($color: $indigo-color-scroll, $alpha: 0.1);
+        border-radius: 10px;
+    }
 
-/* Handle on hover */
-::-webkit-scrollbar-thumb:hover {
-    background: rgba($color: $indigo-color-scroll, $alpha: 0.3);
+    /* Handle */
+    ::-webkit-scrollbar-thumb {
+        background   : rgba($color: $indigo-color-scroll, $alpha: 0.2);
+        border-radius: 10px;
+    }
+
+    /* Handle on hover */
+    ::-webkit-scrollbar-thumb:hover {
+        background: rgba($color: $indigo-color-scroll, $alpha: 0.3);
+    }
 }
 
 /****

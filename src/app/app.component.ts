@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { AfterViewInit, Component, OnDestroy, OnInit } from '@angular/core';
 import { Routes } from '@angular/router';
 import { routes } from 'src/app/menu/menu-routing.module';
 import { DataService } from './shared/services/data.service';
@@ -11,13 +11,14 @@ import { SubSink } from 'subsink';
   templateUrl: './app.component.html',
   styleUrls: ['./app.component.scss']
 })
-export class AppComponent implements OnInit, OnDestroy {
+export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
 
   title = 'my-personal-website';
   menuRoutes: Routes = routes;
   loading$: Observable<boolean>;
   private subs: SubSink;
   sidenavOpen: boolean = false;
+  isViewInit: boolean = false;
 
   constructor(private dataService: DataService, private swUpdate: SwUpdate) {
     this.dataService.getAppData();
@@ -54,6 +55,10 @@ export class AppComponent implements OnInit, OnDestroy {
       });
     }
 
+  }
+
+  ngAfterViewInit(): void {
+    this.isViewInit = true;
   }
 
   ngOnDestroy(): void {
