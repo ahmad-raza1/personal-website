@@ -29,6 +29,9 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
   ngOnInit(): void {
 
     if (this.swUpdate.isEnabled) {
+      // activate update
+      this.swUpdate.activateUpdate();
+
       // whenever a new version is ready for activation
       this.subs.sink = this.swUpdate.versionUpdates.pipe(
         filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
@@ -39,7 +42,7 @@ export class AppComponent implements OnInit, AfterViewInit, OnDestroy {
         })))
         .subscribe(version => {
           console.log(`Activating the update: ${JSON.stringify(version)}`);
-          this.swUpdate.activateUpdate().then(_ => window.location.reload());
+          window.location.reload();
         });
 
       // checking for an update after every one minute 
