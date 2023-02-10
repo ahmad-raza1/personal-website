@@ -30,7 +30,7 @@ export class DataService {
       )
       .subscribe({
         next: (response: ApiResponse) => {
-          if (response.code === 200) {
+          if (response.code === 200 || response.code === 304) {
             this.appData = response.data as Data;
           } else {
             throw new Error(response.message);
