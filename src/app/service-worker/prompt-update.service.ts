@@ -27,7 +27,7 @@ export class PromptUpdateService {
         .subscribe(version => {
           console.log(`Activating the update: ${JSON.stringify(version)}`);
           // reload the page to update to the latest version.
-          document.location.reload();
+          window.location.reload();
         });
 
       // allow the app to stabilize first, before starting
