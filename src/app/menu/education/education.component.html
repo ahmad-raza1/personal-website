@@ -1,11 +1,13 @@
 <section id="education" fxLayout="column" fxLayoutAlign="space-around" fxLayoutGap="1rem">
     <div *ngFor="let education of educations">
-        <mat-card fxFlex="50" fxFlex.lt-md="100" style="margin: auto;">
-            <mat-card-header class="pd-16">
-                <mat-card-title>{{education.institution}}</mat-card-title>
+        <mat-card fxFlex="50" fxFlex.lt-md="80" fxFlex.lt-sm="100" style="margin: auto;">
+            <mat-card-header>
+                <mat-card-title>
+                    <a href="{{education.url}}" target="_blank">{{education.institution}}</a>
+                </mat-card-title>
             </mat-card-header>
             <mat-divider></mat-divider>
-            <mat-card-content>
+            <mat-card-content class="content__pd-bt-0">
                 <mat-list>
                     <mat-list-item>
                         <mat-icon matListItemIcon>school</mat-icon>

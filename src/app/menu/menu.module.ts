@@ -7,12 +7,17 @@ import { MatModule } from '../mat/mat.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { SkillsComponent } from './skills/skills.component';
 import { EducationComponent } from './education/education.component';
+import { ExperienceComponent } from './experience/experience.component';
+import { DurationPipe } from '../shared/pipes/duration.pipe';
 
 @NgModule({
   declarations: [
     HomeComponent,
     SkillsComponent,
-    EducationComponent
+    EducationComponent,
+    ExperienceComponent,
+
+    DurationPipe
   ],
   imports: [
     CommonModule,

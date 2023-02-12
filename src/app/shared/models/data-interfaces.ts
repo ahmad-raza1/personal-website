@@ -18,8 +18,8 @@ export interface Experience {
     organization: string,
     designation: string,
     jobType: string,
-    from: string,
-    to: string,
+    from: Date,
+    to: Date,
     location: string,
     url: string
 }

@@ -1,0 +1,39 @@
+<section id="experience" fxLayout="column" fxLayoutAlign="space-around" fxLayoutGap="1rem">
+    <div *ngFor="let experience of experiences">
+        <mat-card fxFlex="50" fxFlex.lt-md="80" fxFlex.lt-sm="100" style="margin: auto;">
+            <mat-card-header>
+                <mat-card-title>
+                    <a href="{{experience.url}}" target="_blank">{{experience.organization}}</a>
+                </mat-card-title>
+            </mat-card-header>
+            <mat-divider></mat-divider>
+            <mat-card-content class="content__pd-bt-0">
+                <mat-list>
+                    <mat-list-item>
+                        <mat-icon matListItemIcon>business</mat-icon>
+                        <span matListItemTitle>{{experience.designation}}</span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon matListItemIcon>work</mat-icon>
+                        <span matListItemTitle>{{experience.jobType}}</span>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon matListItemIcon>date_range</mat-icon>
+                        <span matListItemTitle>{{experience.from | date}} - {{(experience.to | date) ?? "Present"}}
+                        </span>
+                        <span matListItemLine *ngIf="!experience.to; else experienceDuration">
+                            {{experience.from | duration: currentDate}}
+                        </span>
+                        <ng-template #experienceDuration>
+                            <span matListItemLine> {{experience.from | duration: experience.to}}</span>
+                        </ng-template>
+                    </mat-list-item>
+                    <mat-list-item>
+                        <mat-icon matListItemIcon>location_on</mat-icon>
+                        <span matListItemTitle>{{experience.location}}</span>
+                    </mat-list-item>
+                </mat-list>
+            </mat-card-content>
+        </mat-card>
+    </div>
+</section>

@@ -8,7 +8,6 @@ import { MatModule } from '../mat/mat.module';
 import { FlexLayoutModule } from '@angular/flex-layout';
 import { NotFoundComponent } from './not-found/not-found.component';
 
-
 @NgModule({
   declarations: [
     HeaderComponent,
