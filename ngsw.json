@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1676113258031,
+  "timestamp": 1676197140700,
   "index": "https://ahmed-raza.com/index.html",
   "assetGroups": [
     {
@@ -11,14 +11,14 @@
         "ignoreVary": true
       },
       "urls": [
-        "https://ahmed-raza.com/825.41e61fb421af21cb.js",
+        "https://ahmed-raza.com/825.1426b31dc1c1a7d3.js",
         "https://ahmed-raza.com/favicon.ico",
         "https://ahmed-raza.com/index.html",
-        "https://ahmed-raza.com/main.085fb8160f2d0cec.js",
+        "https://ahmed-raza.com/main.f54ff1a91283c268.js",
         "https://ahmed-raza.com/manifest.webmanifest",
         "https://ahmed-raza.com/polyfills.baa8e7eb7cd00f8d.js",
-        "https://ahmed-raza.com/runtime.6faf41b8034d2944.js",
-        "https://ahmed-raza.com/styles.1960e12abd0b64b8.css"
+        "https://ahmed-raza.com/runtime.664e7453e1e5cf68.js",
+        "https://ahmed-raza.com/styles.f36c40fbbd109eac.css"
       ],
       "patterns": []
     },
@@ -70,7 +70,7 @@
     }
   ],
   "hashTable": {
-    "https://ahmed-raza.com/825.41e61fb421af21cb.js": "ed57896941dd46e73e4ce02fe426f385503b382d",
+    "https://ahmed-raza.com/825.1426b31dc1c1a7d3.js": "2bf260ca18f214d5e9b050c03cef1b19d589f20a",
     "https://ahmed-raza.com/assets/ahmad-raza.png": "ca20d6bef1a79c1daa08dbc8828ebc3e86976551",
     "https://ahmed-raza.com/assets/ahmad-raza.webp": "5f80f06c30c64b277d3c990a87891faeee925249",
     "https://ahmed-raza.com/assets/css/ngx-spinner/ball-atom.css": "1ee96b744c5a1a2c1bc653ec130cc7db535b508e",
@@ -91,12 +91,12 @@
     "https://ahmed-raza.com/fa-v4compatibility.200e567a093eee3f.ttf": "bb11949937f5f6eb90210bb6947c479a00e418ab",
     "https://ahmed-raza.com/fa-v4compatibility.e993637ad6526525.woff2": "ba41d5ea9eadeea164740766516800b41f4830e7",
     "https://ahmed-raza.com/favicon.ico": "22f6a4a3bcaafafb0254e0f2fa4ceb89e505e8b2",
-    "https://ahmed-raza.com/index.html": "9749701be464066c512cbae1e6ed52fbecfdb7e1",
-    "https://ahmed-raza.com/main.085fb8160f2d0cec.js": "66cfe32826804b2e108f04ede77776fd96bac62a",
+    "https://ahmed-raza.com/index.html": "a45bc987f940fa9ff3c6cad79146c8b0b2b1e3f6",
+    "https://ahmed-raza.com/main.f54ff1a91283c268.js": "ae6824027827a1f4a636a00819da956d189238e8",
     "https://ahmed-raza.com/manifest.webmanifest": "b3d968f75f1dcd9fbd49deb9d18824332a935541",
     "https://ahmed-raza.com/polyfills.baa8e7eb7cd00f8d.js": "e82f0fe52fa6d937d114eaba8decdd15b8edd4b0",
-    "https://ahmed-raza.com/runtime.6faf41b8034d2944.js": "f97109dd9923408ce22baa553ec2f27a09792d81",
-    "https://ahmed-raza.com/styles.1960e12abd0b64b8.css": "cb01da369adca4226d7e125215496564122e977d"
+    "https://ahmed-raza.com/runtime.664e7453e1e5cf68.js": "fc0b8f1ec0f5d780563358954c3624a2ffb50dc6",
+    "https://ahmed-raza.com/styles.f36c40fbbd109eac.css": "7d3aa7ec8d692d3c84ff721a75264b23da27ffb7"
   },
   "navigationUrls": [
     {
