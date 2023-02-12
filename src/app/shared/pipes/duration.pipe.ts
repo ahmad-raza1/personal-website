@@ -24,10 +24,12 @@ export class DurationPipe implements PipeTransform {
       result += `${diffYears} yr `;
     }
     if (diffMonths > 0) {
-      result += `${diffMonths} mos `;
+      result += diffMonths;
+      result += diffMonths > 1 ? ' mos ' : ' mo ';
     }
     if (diffDaysRemaining > 0) {
-      result += `${diffDaysRemaining} days`;
+      result += diffDaysRemaining;
+      result += diffDaysRemaining > 1 ? ' days ' : ' day ';
     }
 
     return result.trim();
