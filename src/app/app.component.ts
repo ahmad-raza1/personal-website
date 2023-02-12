@@ -4,6 +4,7 @@ import { routes } from 'src/app/menu/menu-routing.module';
 import { DataService } from './shared/services/data.service';
 import { Observable } from 'rxjs';
 import { PromptUpdateService } from './service-worker/prompt-update.service';
+import { SocialLink } from './shared/models/data-interfaces';
 
 @Component({
   selector: 'app-root',
@@ -16,9 +17,8 @@ export class AppComponent implements OnDestroy {
   menuRoutes: Routes = routes;
   loading$: Observable<boolean>;
   sidenavOpen: boolean = false;
-  isViewInit: boolean = false;
 
-  constructor(private dataService: DataService, private promptUpdateService: PromptUpdateService) {
+  constructor(public dataService: DataService, private promptUpdateService: PromptUpdateService) {
     this.dataService.getAppData();
     this.loading$ = this.dataService.loadingSubject$.asObservable();
     // Service Worker

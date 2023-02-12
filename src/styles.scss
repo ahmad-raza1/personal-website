@@ -29,7 +29,8 @@ mat-card {
         color: rgba($color: $indigo-color, $alpha: 0.7);
     }
 
-    &-title>a:hover {
+    &-title>a:hover,
+    &-title>a:visited {
         color: rgba($color: $indigo-color, $alpha: 0.8);
     }
 }

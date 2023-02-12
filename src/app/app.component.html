@@ -8,6 +8,11 @@
           <a mat-list-item [routerLink]="route.path" *ngFor="let route of menuRoutes"
             (click)="sidenav.toggle()">{{route.title}}</a>
         </mat-nav-list>
+        <span fxLayout="row" fxLayoutAlign="center center" fxLayoutGap="1rem" class="sidenav-social-links">
+          <a *ngFor="let item of dataService.socialLinks" [href]="item.url" target="_blank">
+            <i class="fa-2xl fa-brands fa-{{item.faIcon}}" [ngStyle]="{'color': item.color}"></i>
+          </a>
+        </span>
       </mat-sidenav>
       <mat-sidenav-content>
         <router-outlet></router-outlet>
