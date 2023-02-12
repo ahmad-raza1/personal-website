@@ -3,7 +3,7 @@
     <app-header [sidenav]="sidenav"></app-header>
     <mat-sidenav-container class="flex-grow" [hasBackdrop]="false">
       <mat-sidenav #sidenav mode="over" opened="false" class="width-100" [(opened)]="sidenavOpen" fixedInViewport
-        fixedTopGap="56" autosize>
+        fixedTopGap="56">
         <mat-nav-list class="align-center">
           <a mat-list-item [routerLink]="route.path" *ngFor="let route of menuRoutes"
             (click)="sidenav.toggle()">{{route.title}}</a>
@@ -19,7 +19,7 @@
       </mat-sidenav-content>
     </mat-sidenav-container>
     <mat-divider></mat-divider>
-    <app-footer *ngIf="!sidenavOpen"></app-footer>
+    <app-footer></app-footer>
   </div>
 </ng-container>
 
