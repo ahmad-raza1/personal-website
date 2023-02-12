@@ -6,7 +6,6 @@ import { Pipe, PipeTransform } from '@angular/core';
 export class DurationPipe implements PipeTransform {
 
   transform(startDate: Date, endDate: Date): string {
-
     if (typeof (startDate) === "string") {
       startDate = new Date(startDate);
     }
@@ -14,11 +13,23 @@ export class DurationPipe implements PipeTransform {
       endDate = new Date(endDate);
     }
 
-    const diffInTime = endDate.getTime() - startDate.getTime();
-    const diffInDays = diffInTime / (1000 * 3600 * 24);
-    const diffInYears = Math.floor(diffInDays / 365);
-    const diffInMonths = Math.floor((diffInDays % 365) / 30);
+    const diffTime = Math.abs(endDate.getTime() - startDate.getTime());
+    const diffDays = Math.ceil(diffTime / (1000 * 60 * 60 * 24));
+    const diffYears = Math.floor(diffDays / 365.25);
+    const diffMonths = Math.floor((diffDays % 365.25) / 30.4375);
+    const diffDaysRemaining = Math.floor(diffDays % 365.25 % 30.4375);
 
-    return `${diffInYears} yr ${diffInMonths} mos`;
+    let result = '';
+    if (diffYears > 0) {
+      result += `${diffYears} yr `;
+    }
+    if (diffMonths > 0) {
+      result += `${diffMonths} mos `;
+    }
+    if (diffDaysRemaining > 0) {
+      result += `${diffDaysRemaining} days`;
+    }
+
+    return result.trim();
   }
 }

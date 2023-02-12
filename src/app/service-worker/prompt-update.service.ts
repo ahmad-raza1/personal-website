@@ -15,7 +15,6 @@ export class PromptUpdateService {
 
   checkForUpdate(): void {
     if (this.swUpdate.isEnabled) {
-      this.swUpdate.activateUpdate();
       // whenever a new version is ready for activation
       this.subs.sink = this.swUpdate.versionUpdates.pipe(
         filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
@@ -30,13 +29,16 @@ export class PromptUpdateService {
           window.location.reload();
         });
 
+      // first check
+      this.swUpdate.activateUpdate();
+
       // allow the app to stabilize first, before starting
       // polling for updates with `interval()`
       const appIsStable$ = this.appRef.isStable.pipe(first(isStable => isStable === true));
-      const everyFiveMins$ = interval(5 * 60 * 1000);
-      const everyFiveMinsOnceAppIsStable$ = concat(appIsStable$, everyFiveMins$);
+      const everyOneMin$ = interval(1 * 60 * 1000);
+      const everyOneMinOnceAppIsStable$ = concat(appIsStable$, everyOneMin$);
 
-      this.subs.sink = everyFiveMinsOnceAppIsStable$.subscribe(async () => {
+      this.subs.sink = everyOneMinOnceAppIsStable$.subscribe(async () => {
         try {
           const updateFound = await this.swUpdate.checkForUpdate();
           console.log(updateFound ? 'A new version is available.' : 'Already on the latest version.');

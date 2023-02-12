@@ -4,7 +4,6 @@ import { routes } from 'src/app/menu/menu-routing.module';
 import { DataService } from './shared/services/data.service';
 import { Observable } from 'rxjs';
 import { PromptUpdateService } from './service-worker/prompt-update.service';
-import { SocialLink } from './shared/models/data-interfaces';
 
 @Component({
   selector: 'app-root',
