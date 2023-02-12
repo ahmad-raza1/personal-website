@@ -19,7 +19,7 @@
       </mat-sidenav-content>
     </mat-sidenav-container>
     <mat-divider></mat-divider>
-    <app-footer></app-footer>
+    <app-footer *ngIf="!sidenavOpen"></app-footer>
   </div>
 </ng-container>
 
