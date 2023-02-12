@@ -15,6 +15,7 @@ export class PromptUpdateService {
 
   checkForUpdate(): void {
     if (this.swUpdate.isEnabled) {
+
       // whenever a new version is ready for activation
       this.subs.sink = this.swUpdate.versionUpdates.pipe(
         filter((evt): evt is VersionReadyEvent => evt.type === 'VERSION_READY'),
