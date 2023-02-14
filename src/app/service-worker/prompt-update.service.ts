@@ -8,7 +8,7 @@ import { SubSink } from 'subsink';
 })
 export class PromptUpdateService {
 
-  subs: SubSink;
+  private subs: SubSink;
   constructor(private appRef: ApplicationRef, private swUpdate: SwUpdate) {
     this.subs = new SubSink();
   }
@@ -46,5 +46,9 @@ export class PromptUpdateService {
         }
       });
     }
+  }
+
+  destroy(): void {
+    this.subs.unsubscribe();
   }
 }

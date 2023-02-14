@@ -8,7 +8,8 @@
             fxFlexFill fxLayoutAlign="space-between center">
             <span class="website-title">{{websiteTitle}}</span>
             <div fxHide="true" fxShow.gt-sm="true" fxLayout="row">
-                <a mat-tab-link [routerLink]="route.path" *ngFor="let route of menuRoutes">{{route.title}}</a>
+                <a mat-tab-link class="nav-tab-link" [routerLink]="route.path"
+                    *ngFor="let route of menuRoutes">{{route.title}}</a>
 
                 <mat-divider vertical class="nav-mat-divider"></mat-divider>
 

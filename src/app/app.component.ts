@@ -1,4 +1,4 @@
-import { Component, OnDestroy, OnInit } from '@angular/core';
+import { Component, OnDestroy } from '@angular/core';
 import { Routes } from '@angular/router';
 import { routes } from 'src/app/menu/menu-routing.module';
 import { DataService } from './shared/services/data.service';
@@ -26,6 +26,6 @@ export class AppComponent implements OnDestroy {
   }
 
   ngOnDestroy(): void {
-    this.promptUpdateService.subs.unsubscribe();
+    this.promptUpdateService.destroy();
   }
 }
