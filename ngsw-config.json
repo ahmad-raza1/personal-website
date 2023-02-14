@@ -35,7 +35,7 @@
       ],
       "cacheConfig": {
         "strategy": "performance",
-        "maxSize": 1,
+        "maxSize": 5,
         "maxAge": "5m"
       }
     }
