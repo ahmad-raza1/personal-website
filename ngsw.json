@@ -1,6 +1,6 @@
 {
   "configVersion": 1,
-  "timestamp": 1676396141002,
+  "timestamp": 1676397473710,
   "index": "https://ahmed-raza.com/index.html",
   "assetGroups": [
     {
@@ -59,7 +59,7 @@
         "https:\\/\\/script\\.google\\.com\\/macros\\/s\\/AKfycbzz7oiWBFBwynQCr8lyX_xzrlAg1aGldD6plTfyr_d5TfM5oCARm0H32QdBfHAPiu3UVg\\/exec"
       ],
       "strategy": "performance",
-      "maxSize": 1,
+      "maxSize": 5,
       "maxAge": 300000,
       "cacheQueryOptions": {
         "ignoreVary": true
