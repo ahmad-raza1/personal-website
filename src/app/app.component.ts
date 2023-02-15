@@ -19,7 +19,7 @@ export class AppComponent implements OnDestroy {
 
   constructor(public dataService: DataService, private promptUpdateService: PromptUpdateService) {
     // Service Worker
-    this.promptUpdateService.checkForUpdate();
+    // this.promptUpdateService.checkForUpdate();
 
     this.dataService.getAppData();
     this.loading$ = this.dataService.loadingSubject$.asObservable();
