@@ -17,19 +17,18 @@ export class PromptUpdateService extends BehaviorSubject<boolean> {
 
   async checkForUpdate(): Promise<void> {
     if (this.swUpdate.isEnabled) {
-      // activate the update
-      await this.swUpdate.activateUpdate();
 
       this.subs.sink = this.swUpdate.versionUpdates.subscribe(async (evt: VersionEvent) => {
         console.log('UpdateService: versionUpdates', evt);
         switch (evt.type) {
           case 'VERSION_DETECTED':
             console.log(`Downloading new app version: ${evt.version.hash}`);
+            super.next(true);
             break;
           case 'VERSION_READY':
             console.log(`Current app version: ${evt.currentVersion.hash}`);
             console.log(`New app version ready for use: ${evt.latestVersion.hash}`);
-            document.location.reload();
+            this.swUpdate.activateUpdate().then(() => document.location.reload());
             break;
           case 'VERSION_INSTALLATION_FAILED':
             console.log(`Failed to install app version '${evt.version.hash}': ${evt.error}`);
@@ -47,13 +46,7 @@ export class PromptUpdateService extends BehaviorSubject<boolean> {
         takeWhile(() => super.value === false)
       ).subscribe(async () => {
         try {
-          const updateFound = await this.swUpdate.checkForUpdate();
-          if (updateFound) {
-            console.log('A new version is available.');
-            super.next(true);
-          } else {
-            console.log('Already on the latest version.');
-          }
+          await this.swUpdate.checkForUpdate();
         } catch (err) {
           console.error('Failed to check for updates:', err);
         }

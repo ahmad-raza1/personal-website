@@ -17,15 +17,15 @@ export class AppComponent implements OnDestroy {
   loading$: Observable<boolean>;
   sidenavOpen: boolean = false;
 
-  constructor(public dataService: DataService/*, private promptUpdateService: PromptUpdateService*/) {
+  constructor(public dataService: DataService, private promptUpdateService: PromptUpdateService) {
     // Service Worker
-    // this.promptUpdateService.checkForUpdate();
+    this.promptUpdateService.checkForUpdate();
 
     this.dataService.getAppData();
     this.loading$ = this.dataService.loadingSubject$.asObservable();
   }
 
   ngOnDestroy(): void {
-    // this.promptUpdateService.destroy();
+    this.promptUpdateService.destroy();
   }
 }

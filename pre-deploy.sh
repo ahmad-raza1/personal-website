@@ -1,0 +1,1 @@
+sed -i "s/\"version\": [0-9]*/\"version\": $(date +'%d%m%Y%H%M%S')/; s~/manifest.webmanifest.*~/manifest.webmanifest?v=$(date +'%d%m%Y%H%M%S')\",~" ngsw-config.json
