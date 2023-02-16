@@ -1,8 +1,8 @@
 {
   "configVersion": 1,
-  "timestamp": 1676569644119,
+  "timestamp": 1676569946743,
   "appData": {
-    "version": 16022023224707
+    "version": 16022023225212
   },
   "index": "https://ahmed-raza.com/index.html",
   "assetGroups": [
@@ -22,9 +22,7 @@
         "https://ahmed-raza.com/runtime.664e7453e1e5cf68.js",
         "https://ahmed-raza.com/styles.79eb34df622bd5d4.css"
       ],
-      "patterns": [
-        "\\/404\\.html"
-      ]
+      "patterns": []
     },
     {
       "name": "assets",
@@ -68,7 +66,7 @@
       "cacheQueryOptions": {
         "ignoreVary": true
       },
-      "version": 16022023224707
+      "version": 16022023225212
     }
   ],
   "hashTable": {
