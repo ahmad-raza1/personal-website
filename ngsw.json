@@ -1,8 +1,8 @@
 {
   "configVersion": 1,
-  "timestamp": 1676570633310,
+  "timestamp": 1676571226034,
   "appData": {
-    "version": 16022023230335
+    "version": 16022023231328
   },
   "index": "https://ahmed-raza.com/index.html",
   "assetGroups": [
@@ -62,11 +62,11 @@
       ],
       "strategy": "performance",
       "maxSize": 5,
-      "maxAge": 300000,
+      "maxAge": 86400000,
       "cacheQueryOptions": {
         "ignoreVary": true
       },
-      "version": 16022023230335
+      "version": 16022023231328
     }
   ],
   "hashTable": {
