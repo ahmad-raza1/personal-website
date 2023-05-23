@@ -1,7 +1,7 @@
 {
   "$schema": "./node_modules/@angular/service-worker/config/schema.json",
   "appData": {
-    "version": 28022023155935
+    "version": 23052023124844
   },
   "index": "/index.html",
   "assetGroups": [
@@ -12,7 +12,7 @@
         "files": [
           "/favicon.ico",
           "/index.html",
-          "/manifest.webmanifest?v=28022023155935",
+          "/manifest.webmanifest?v=23052023124844",
           "/*.css",
           "/*.js"
         ]
@@ -32,7 +32,7 @@
   ],
   "dataGroups": [
     {
-      "version": 28022023155935,
+      "version": 23052023124844,
       "name": "cached-api",
       "urls": [
         "https://script.google.com/macros/s/AKfycbzz7oiWBFBwynQCr8lyX_xzrlAg1aGldD6plTfyr_d5TfM5oCARm0H32QdBfHAPiu3UVg/exec"
