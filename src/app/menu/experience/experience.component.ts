@@ -11,7 +11,7 @@ export class ExperienceComponent {
   experiences: Array<Experience>;
   currentDate: Date;
   constructor(private dataService: DataService) {
-    this.experiences = [this.dataService.experience] as Array<Experience>;
+    this.experiences = this.dataService.experience as Array<Experience>;
     this.currentDate = new Date();
   }
 }
